@@ -3,3 +3,6 @@ plugins {
 }
 
 rootProject.name = "CriterionKt"
+
+include("basic")
+include("utils")

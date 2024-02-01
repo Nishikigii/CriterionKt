@@ -6,7 +6,7 @@
 
 <!-- 如何将库引入您的项目 -->
 ## Include
-Find the **README.md** in the module you want to use. It will explain in detail how to include it to your own project
+find the **README.md** in the module you want to use. It will explain in detail how to include it to your own project
 
 <!-- 介绍库创立初衷 -->
 ## Target
