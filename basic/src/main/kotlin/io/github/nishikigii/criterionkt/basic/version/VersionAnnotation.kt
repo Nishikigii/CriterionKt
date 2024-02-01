@@ -1,4 +1,4 @@
-package io.github.nishikigii.criterionkt.utils.version
+package io.github.nishikigii.criterionkt.basic.version
 
 // 版本类型
 enum class VersionAnnotation( val info: String )

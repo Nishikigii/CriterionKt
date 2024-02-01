@@ -1,4 +1,4 @@
-package io.github.nishikigii.criterionkt.utils.version
+package io.github.nishikigii.criterionkt.basic.version
 
 import java.io.Serializable
 

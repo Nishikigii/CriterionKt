@@ -1,4 +1,4 @@
-package io.github.nishikigii.criterionkt.utils.format
+package io.github.nishikigii.criterionkt.basic.formattable
 
 // 可被格式化
 interface Formattable

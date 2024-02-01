@@ -1,7 +1,7 @@
 package io.github.nishikigii.criterionkt.basic
 
-import io.github.nishikigii.criterionkt.utils.version.VersionAnnotation.Alpha
-import io.github.nishikigii.criterionkt.utils.version.VersionInfo
+import io.github.nishikigii.criterionkt.basic.version.VersionAnnotation.Alpha
+import io.github.nishikigii.criterionkt.basic.version.VersionInfo
 
 // 模块信息
 object CriterionKtBasic
