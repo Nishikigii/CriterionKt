@@ -7,3 +7,4 @@ rootProject.name = "CriterionKt"
 include("basic")
 include("utils")
 include("terminal")
+include("json")

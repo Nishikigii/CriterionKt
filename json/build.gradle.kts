@@ -1,6 +1,5 @@
 plugins {
     kotlin("jvm")
-    id("maven-publish")
 }
 
 group = "io.github.nishikigii.criterionkt"
@@ -12,25 +11,11 @@ repositories {
 
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
-    // Json Resolver
-    api( project(":json") )
 }
 
 tasks.test {
     useJUnitPlatform()
 }
-
-publishing {
-    publications {
-        create<MavenPublication>("local") {
-            from(components["java"])
-        }
-    }
-    repositories {
-        mavenLocal()
-    }
-}
-
 kotlin {
     jvmToolchain(11)
 }
