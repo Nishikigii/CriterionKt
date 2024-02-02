@@ -15,11 +15,12 @@ enum class SystemType
 
     Others ;
 
+    // 若此 Type 是指定 Type 之一则执行任务
+    fun matches( vararg types: SystemType, task: ()->Unit ) = if ( this !in types ) false else { task(); true }
 
-    // 判断此 Type 是否在某范围内
-    fun matches( vararg types: SystemType ) = this in types
 
-    // 次 Type 如果是当前类型则执行任务
-    fun isCurrent( task: (SystemType)->Unit ) = if ( currentSystemType == this ) task(currentSystemType) else Unit
+    // 若此 Type 是当前系统 Type 则执行任务
+    fun isCurrent( task: (SystemType)->Unit ) = if ( currentSystemType != this ) false else { task(this); true }
 
 }
+
