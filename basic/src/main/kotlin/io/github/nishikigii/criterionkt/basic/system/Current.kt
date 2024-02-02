@@ -1,7 +1,10 @@
 package io.github.nishikigii.criterionkt.basic.system
 
-val currentOsName = System.getProperty("os.name").lowercase()
+private val currentOsName = System.getProperty("os.name").lowercase()
 
+/**
+ * the type of current system
+ */
 val currentSystemType = when {
     currentOsName.contains("mac") -> SystemType.MacOS
     currentOsName.contains("win") -> SystemType.Windows

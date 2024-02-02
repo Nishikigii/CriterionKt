@@ -1,6 +1,9 @@
 package test.terminal
 
-fun main()
-{
+import io.github.nishikigii.criterionkt.terminal.application.terminalApplication
+
+fun main() = terminalApplication {
+
+
 
 }

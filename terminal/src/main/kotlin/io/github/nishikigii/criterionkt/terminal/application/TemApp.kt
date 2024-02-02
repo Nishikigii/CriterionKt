@@ -12,7 +12,7 @@ fun terminalApplication( task: TemAppScope.()-> Unit )
 {
     val scope = object: TemAppScope {
 
-        override fun exitApplication( exitCode: Int, prepare: TemAppScope.()->Unit ) {
+        override fun exitTemApp( exitCode: Int, prepare: TemAppScope.()->Unit ) {
             this.task()
             exitProcess( exitCode )
         }

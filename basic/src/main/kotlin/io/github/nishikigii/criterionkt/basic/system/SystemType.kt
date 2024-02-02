@@ -1,26 +1,42 @@
 package io.github.nishikigii.criterionkt.basic.system
 
-// 系统类型
+/**
+ * operating system type
+ */
 enum class SystemType
 {
+    // https://www.apple.com/macos
     MacOS,
 
+    // https://www.microsoft.com/windows/
     Windows,
 
+    // https://wikipedia.org/wiki/Linux
     Linux,
 
+    // https://www.android.com/
     Android,
 
+    // https://www.apple.com/ios/
     IOS,
 
     Others ;
 
-    // 若此 Type 是指定 Type 之一则执行任务
-    fun matches( vararg types: SystemType, task: ()->Unit ) = if ( this !in types ) false else { task(); true }
+    /**
+     * if this enum matches anyone inside the provided list, execute provided action
+     *
+     * @param list matching list
+     * @param action the task that will be executed if the match is successful
+     */
+    fun matches( vararg list: SystemType, action: ()->Unit ) = if ( this !in list ) false else { action(); true }
 
 
-    // 若此 Type 是当前系统 Type 则执行任务
-    fun isCurrent( task: (SystemType)->Unit ) = if ( currentSystemType != this ) false else { task(this); true }
+    /**
+     * if this enum same to the type of current system, execute provided action
+     *
+     * @param action the action that will be executed if this enum is same to the type of current system
+     */
+    fun isCurrent( action: (SystemType)->Unit ) = if ( currentSystemType != this ) false else { action(this); true }
 
 }
 
