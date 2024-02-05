@@ -1,6 +1,6 @@
 package io.github.nishikigii.criterionkt.terminal.command
 
-import io.github.nishikigii.criterionkt.terminal.application.TemAppScope
+import io.github.nishikigii.criterionkt.terminal.TemAppScope
 
 /**
  * a command of terminal applications that is presented as a function

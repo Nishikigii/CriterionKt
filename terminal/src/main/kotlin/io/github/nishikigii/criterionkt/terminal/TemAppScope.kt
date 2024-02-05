@@ -1,4 +1,4 @@
-package io.github.nishikigii.criterionkt.terminal.application
+package io.github.nishikigii.criterionkt.terminal
 
 /**
  * scope of terminal application.

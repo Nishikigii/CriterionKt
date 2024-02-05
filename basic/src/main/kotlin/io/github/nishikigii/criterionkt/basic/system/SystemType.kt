@@ -36,7 +36,7 @@ enum class SystemType
      *
      * @param action the action that will be executed if this enum is same to the type of current system
      */
-    fun isCurrent( action: (SystemType)->Unit ) = if ( currentSystemType != this ) false else { action(this); true }
+    fun isCurrent( action: (SystemType)->Unit ) = if ( systemType != this ) false else { action(this); true }
 
 }
 

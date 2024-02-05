@@ -2,8 +2,10 @@ package io.github.nishikigii.criterionkt.basic.version
 
 import java.io.Serializable
 
-// 版本号信息
-data class VersionInfo (
+/**
+ * version info pack.
+ */
+data class Version (
     // 主版本号
     val major: UInt,
 
@@ -14,7 +16,7 @@ data class VersionInfo (
     val patch: UInt = 0u,
 
     // 版本类型
-    val annotation: VersionAnnotation? = null,
+    val annotation: Annotation? = null,
 
     // 构建序号
     val buildNumber: UInt? = null

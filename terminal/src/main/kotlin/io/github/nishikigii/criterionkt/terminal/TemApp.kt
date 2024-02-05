@@ -1,4 +1,4 @@
-package io.github.nishikigii.criterionkt.terminal.application
+package io.github.nishikigii.criterionkt.terminal
 
 import kotlin.system.exitProcess
 
@@ -10,7 +10,8 @@ import kotlin.system.exitProcess
  */
 fun terminalApplication( task: TemAppScope.()-> Unit )
 {
-    val scope = object: TemAppScope {
+    val scope = object: TemAppScope
+    {
 
         override fun exitTemApp( exitCode: Int, prepare: TemAppScope.()->Unit ) {
             this.task()

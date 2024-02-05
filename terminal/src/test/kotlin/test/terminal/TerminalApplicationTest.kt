@@ -1,6 +1,6 @@
 package test.terminal
 
-import io.github.nishikigii.criterionkt.terminal.application.terminalApplication
+import io.github.nishikigii.criterionkt.terminal.terminalApplication
 import io.github.nishikigii.criterionkt.terminal.command.Response
 import io.github.nishikigii.criterionkt.terminal.command.command
 

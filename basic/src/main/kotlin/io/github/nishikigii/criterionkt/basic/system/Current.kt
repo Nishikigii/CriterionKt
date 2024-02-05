@@ -1,16 +1,16 @@
 package io.github.nishikigii.criterionkt.basic.system
 
-private val currentOsName = System.getProperty("os.name").lowercase()
+private val os = System.getProperty("os.name").lowercase()
 
 /**
  * the type of current system
  */
-val currentSystemType = when {
-    currentOsName.contains("mac") -> SystemType.MacOS
-    currentOsName.contains("win") -> SystemType.Windows
-    currentOsName.contains("nix") || currentOsName.contains("nux") || currentOsName.contains("aix") -> SystemType.Linux
-    currentOsName.contains("android") -> SystemType.Android
-    currentOsName.contains("ios") -> SystemType.IOS
+val systemType = when {
+    os.contains("mac") -> SystemType.MacOS
+    os.contains("win") -> SystemType.Windows
+    os.contains("nix") || os.contains("nux") || os.contains("aix") -> SystemType.Linux
+    os.contains("android") -> SystemType.Android
+    os.contains("ios") -> SystemType.IOS
     else -> SystemType.Others
 }
 
