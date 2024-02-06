@@ -24,6 +24,10 @@ data class Version (
 ): Serializable
 {
 
+    constructor( string: String ): this(string.split('.'))
+
+    constructor( list: List<String> ): this(list[0].toUInt(), list[1].toUInt(), list[2].toUInt())
+
     override fun toString() = StringBuilder()
         .append("$major.$minor.$patch")
         .apply { if (buildNumber != null) append("($buildNumber)") }

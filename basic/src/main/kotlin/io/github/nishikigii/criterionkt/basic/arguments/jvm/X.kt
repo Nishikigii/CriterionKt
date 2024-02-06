@@ -1,25 +1,22 @@
 package io.github.nishikigii.criterionkt.basic.arguments.jvm
 
-import io.github.nishikigii.criterionkt.basic.arguments.ArgsScope
-
 /**
- * java virtual machine start up and runtime arguments.
+ *
  */
-fun ArgsScope.jvm( content: JvmArgsScope.()->Unit )
+fun JvmArgsScope.x( content: XargsScope.()->Unit )
 {
     val editable = getEditable()
     val result = ArrayList<String>()
-    val scope = object: JvmArgsScope {
+    val scope = object: XargsScope
+    {
         override fun getEditable() = result
     }
     scope.content()
     editable.addAll(result)
 }
 
-/**
- *
- */
-interface JvmArgsScope
+interface XargsScope
 {
     fun getEditable(): ArrayList<String>
+
 }
