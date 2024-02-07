@@ -24,7 +24,7 @@ data class Version (
 ): Serializable
 {
 
-    constructor( string: String ): this(string.split('.'))
+    constructor( string: String ): this(string.replace("\"","").split('.'))
 
     constructor( list: List<String> ): this(list[0].toUInt(), list[1].toUInt(), list[2].toUInt())
 

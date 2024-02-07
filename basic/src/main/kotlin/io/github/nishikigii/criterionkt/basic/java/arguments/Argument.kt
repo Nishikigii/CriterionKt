@@ -1,4 +1,4 @@
-package io.github.nishikigii.criterionkt.basic.arguments
+package io.github.nishikigii.criterionkt.basic.java.arguments
 
 /**
  *

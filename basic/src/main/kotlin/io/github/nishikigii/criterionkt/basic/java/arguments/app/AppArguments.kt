@@ -1,6 +1,6 @@
-package io.github.nishikigii.criterionkt.basic.arguments.app
+package io.github.nishikigii.criterionkt.basic.java.arguments.app
 
-import io.github.nishikigii.criterionkt.basic.arguments.ArgsScope
+import io.github.nishikigii.criterionkt.basic.java.arguments.ArgsScope
 
 /**
  * application arguments.
@@ -9,7 +9,8 @@ fun ArgsScope.application( content: AppArgsScope.()->Unit )
 {
     val editable = getEditable()
     val result = ArrayList<String>()
-    val scope = object: AppArgsScope {
+    val scope = object: AppArgsScope
+    {
         override fun getEditable() = result
     }
     scope.content()

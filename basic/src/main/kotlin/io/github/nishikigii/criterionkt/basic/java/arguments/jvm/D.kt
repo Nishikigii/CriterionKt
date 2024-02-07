@@ -1,6 +1,6 @@
-package io.github.nishikigii.criterionkt.basic.arguments.jvm
+package io.github.nishikigii.criterionkt.basic.java.arguments.jvm
 
-import io.github.nishikigii.criterionkt.basic.arguments.jvm.JvmArgsScope
+import io.github.nishikigii.criterionkt.basic.java.arguments.jvm.JvmArgsScope
 
 /**
  *

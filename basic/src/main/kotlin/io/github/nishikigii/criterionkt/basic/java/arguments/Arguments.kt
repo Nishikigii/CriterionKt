@@ -1,4 +1,4 @@
-package io.github.nishikigii.criterionkt.basic.arguments
+package io.github.nishikigii.criterionkt.basic.java.arguments
 
 /**
  * arguments.
@@ -6,7 +6,8 @@ package io.github.nishikigii.criterionkt.basic.arguments
 fun arguments( content: ArgsScope.()->Unit ): Argument
 {
     val result = ArrayList<String>()
-    val scope = object: ArgsScope {
+    val scope = object: ArgsScope
+    {
         override fun getEditable() = result
     }
     scope.content()
