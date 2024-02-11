@@ -1,6 +1,5 @@
 package test.basic
 
-
 /**
  *
  */

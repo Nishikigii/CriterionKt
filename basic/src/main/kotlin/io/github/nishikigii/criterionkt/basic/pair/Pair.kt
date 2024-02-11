@@ -19,4 +19,6 @@ open class Pair<K,V> (
     constructor( key: K, value: V ): this(key, value, ':')
 
     override fun toString() = "$key${split ?: ""}$value"
+
+    infix fun <A, B> A.to(that: B): Pair<A, B> = Pair(this, that)
 }
