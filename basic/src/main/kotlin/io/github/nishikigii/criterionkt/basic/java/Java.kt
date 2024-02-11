@@ -9,7 +9,7 @@ import java.util.Properties
 /**
  * java information package.
  */
-data class Java(
+data class Java (
 
     val home: File,
 
@@ -64,4 +64,5 @@ data class Java(
     {
         JRE, JDK, Unknown
     }
+
 }
