@@ -1,9 +1,16 @@
 package io.github.nishikigii.criterionkt.basic.java
 
 import io.github.nishikigii.criterionkt.basic.java.Java.Type.Unknown
+import io.github.nishikigii.criterionkt.basic.java.Parameters.MainClass
+import io.github.nishikigii.criterionkt.basic.java.Parameters.More
+import io.github.nishikigii.criterionkt.basic.java.Parameters.Property
+import io.github.nishikigii.criterionkt.basic.launch.Launcher
+import io.github.nishikigii.criterionkt.basic.launch.Parameter
+import io.github.nishikigii.criterionkt.basic.launch.Parameterized
 import io.github.nishikigii.criterionkt.basic.version.Version
 import java.io.File
 import java.io.FileNotFoundException
+import java.io.Serializable
 import java.util.Properties
 
 /**
@@ -22,7 +29,8 @@ data class Java (
     val executable: File,
 
     val type: Type
-)
+
+): Serializable, Parameterized
 {
     companion object
     {
@@ -63,6 +71,18 @@ data class Java (
     enum class Type
     {
         JRE, JDK, Unknown
+    }
+
+    override fun launcher( vararg parm: Parameter ): Launcher
+    {
+        // 检查必要项是否缺失
+        val necessary = arrayOf( MainClass::class )/* 必要项 */
+        val all = parm.map { it::class } /* 传入的所有项 */
+        val missing = necessary.filter { it !in all /*找不到则为缺失*/}.map { it.simpleName /*储存为简短名称*/ }
+        if ( missing.isNotEmpty() ) /* 存在缺失项则抛异常 */
+            throw IllegalArgumentException("missing necessary item: $missing")
+
+        TODO()
     }
 
 }

@@ -1,29 +1,16 @@
 package test.basic
 
-import io.github.nishikigii.criterionkt.basic.launch.Parameterized
-import io.github.nishikigii.criterionkt.basic.launch.argument.Parm
-import io.github.nishikigii.criterionkt.basic.launch.launcher.ParmLauncher
+import io.github.nishikigii.criterionkt.basic.java.Java
+import io.github.nishikigii.criterionkt.basic.java.Parameters.MainClass
 
 /**
  *
  */
 fun main()
 {
-    val target = LaunchTest()
-    val launcher = target.launcher()
-    val process = launcher.process()
-}
+    val parm = arrayOf (
+        *MainClass.fromJar("/Users/andei_buite/Downloads/client-1.2.0.jar")
+    )
 
-class LaunchTest: Parameterized<String>
-{
-    override fun launcher( vararg parm: Pair<Parm<String>, String> ): ParmLauncher<String>
-    {
-        TODO("Not yet implemented")
-    }
-
-    override fun exportParm(): String
-    {
-        TODO("Not yet implemented")
-    }
-
+    val process = Java.fromCurrent().launcher( *parm ).process()
 }

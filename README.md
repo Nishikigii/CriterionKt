@@ -4,21 +4,17 @@
 
 ---
 
-<!-- 如何将库引入您的项目 -->
+<!-- 引入 -->
 ## Include
 find the **README.md** in the module you want to use. It will explain in detail how to include it to your own project
 
-<!-- 介绍库创立初衷 -->
+<!-- 项目作用 -->
 ## Target
 
-<!-- 如何参与定制标准 -->
+<!-- 加入开发 -->
 ## Develop
-**anyone** can submit your introduction to "Nishikigii" to apply to join the project development  
-I will check your submissions and make decision to invite you or not  
-you will be **preferred** if you have a recommendation letter from a project member  
+Apply to [nishikigii](https://github.com/Nishikigii)
 
 
-<!-- 鸣谢列表 -->
+<!-- 鸣谢 -->
 ## Thanks
-to **all** developers joined the project and **institutions** and **individuals** who provide us with financial or moral support  
-here will list a **part** of the above providers  

@@ -1,10 +1,10 @@
 package io.github.nishikigii.criterionkt.basic.launch
 
 /**
- * could be launched to process.
+ * could be able to be launched into processes.
  */
 interface Launch
 {
-    fun launch(): Process
+    fun launcher(): Launcher
 
 }
