@@ -1,6 +1,6 @@
 package test.basic
 
-import io.github.nishikigii.criterionkt.basic.json.builtin.JsonArray
+import io.github.nishikigii.criterionkt.json.builtin.JsonArray
 
 /**
  *

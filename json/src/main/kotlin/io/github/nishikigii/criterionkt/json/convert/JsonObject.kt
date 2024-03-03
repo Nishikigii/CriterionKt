@@ -1,6 +1,6 @@
 package io.github.nishikigii.criterionkt.json.convert
 
-import io.github.nishikigii.criterionkt.basic.json.builtin.JsonObject
+import io.github.nishikigii.criterionkt.json.builtin.JsonObject
 
 /**
  *
