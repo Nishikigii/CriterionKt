@@ -11,20 +11,8 @@ repositories {
 }
 
 dependencies {
-    // Kotlin SDK
     testImplementation("org.jetbrains.kotlin:kotlin-test")
-    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
-    // Http Client
-    implementation("org.apache.httpcomponents.client5:httpclient5:5.3.1")
-    // Logging
-    api("org.slf4j:slf4j-api:1.7.36")
-    api("org.apache.logging.log4j:log4j-slf4j-impl:2.22.0")
-    api("org.apache.logging.log4j:log4j-api:2.22.0")
-    api("org.apache.logging.log4j:log4j-core:2.22.0")
-}
-
-tasks.test {
-    useJUnitPlatform()
+    api( project(":basic") )
 }
 
 publishing {
@@ -37,6 +25,12 @@ publishing {
         mavenLocal()
     }
 }
+
+
+tasks.test {
+    useJUnitPlatform()
+}
+
 
 kotlin {
     jvmToolchain(11)
