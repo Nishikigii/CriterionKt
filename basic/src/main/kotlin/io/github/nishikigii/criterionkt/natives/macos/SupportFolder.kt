@@ -1,5 +1,6 @@
 package io.github.nishikigii.criterionkt.natives.macos
 
+import io.github.nishikigii.criterionkt.natives.home
 import java.io.File
 
 
@@ -11,4 +12,4 @@ fun support( application: String ) = File(supportPath(application))
 /**
  * application support folder path.
  */
-fun supportPath( application: String ) = "${System.getProperty("user.home")}/Library/Application Support/$application"
+fun supportPath( application: String ) = "$home/Library/Application Support/$application"

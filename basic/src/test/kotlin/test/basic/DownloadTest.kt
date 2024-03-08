@@ -1,6 +1,6 @@
 package test.basic
 
-import io.github.nishikigii.criterionkt.network.download.Pull
+import io.github.nishikigii.criterionkt.network.local.Pull
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
