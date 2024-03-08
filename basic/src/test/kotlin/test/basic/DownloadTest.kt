@@ -1,5 +1,6 @@
 package test.basic
 
+import io.github.nishikigii.criterionkt.network.local.Downloader
 import io.github.nishikigii.criterionkt.network.local.Pull
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -35,14 +36,11 @@ fun downloadFile(url: String, file: String)
 
 class DownloadPack: Pull
 {
-    private val downloader = object: CoroutineScope
-    {
-        override val coroutineContext = Job() + Dispatchers.IO
-    }
+    private val downloader = Downloader()
 
-    override fun downloadTrack() = downloader
+    override fun track() = downloader
 
-    override fun pull( local: String ) = downloadTrack().apply {
+    override fun pull(): Downloader = track().apply {
         launch {
             println("downloading")
             delay(5000)
