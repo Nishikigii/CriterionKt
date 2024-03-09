@@ -1,8 +1,6 @@
 package io.github.nishikigii.criterionkt.network.local
 
 import io.github.nishikigii.criterionkt.natives.downloadDir
-import io.github.nishikigii.criterionkt.network.Track
-import kotlinx.coroutines.CoroutineScope
 
 /**
  * pull file from the internet about the implementor's instance.

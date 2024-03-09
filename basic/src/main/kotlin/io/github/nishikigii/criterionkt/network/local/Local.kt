@@ -1,16 +1,16 @@
 package io.github.nishikigii.criterionkt.network.local
 
-import io.github.nishikigii.criterionkt.network.Track
+import io.github.nishikigii.criterionkt.network.Internet
 
 /**
  * track the downloading process.
  */
-interface Local: Track
+interface Local: Internet
 {
 
     /**
      * get download process tracker.
      */
-    override fun track(): Downloader
+    fun track(): Downloader
 
 }

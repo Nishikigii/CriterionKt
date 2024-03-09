@@ -16,6 +16,7 @@ dependencies {
     api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
     // Http Client
     implementation("org.apache.httpcomponents.client5:httpclient5:5.3.1")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     // Logging
     api("org.slf4j:slf4j-api:1.7.36")
     api("org.apache.logging.log4j:log4j-slf4j-impl:2.22.0")
